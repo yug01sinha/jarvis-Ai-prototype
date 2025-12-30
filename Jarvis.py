@@ -11,7 +11,7 @@ import wikipedia  # New Module for research
 from google import genai
 
 # --- 1. CONFIGURATION ---
-API_KEY = "AIzaSyAZVMGEXXyIVsCMpUAcWlta3Ae9idN7t7U"
+API_KEY = "USE YOUR API KEY"
 client = genai.Client(api_key=API_KEY)
 
 CHROME_PATHS = [
@@ -131,4 +131,5 @@ if __name__ == "__main__":
                     res = client.models.generate_content(model="gemini-1.5-flash", contents=f"User: {query}")
                     speak(res.text)
                 except:
+
                     speak("Core connection error, Sir.")
